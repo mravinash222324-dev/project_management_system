@@ -16,7 +16,7 @@ class ProjectAnalyzer:
         self.llm_model = genai.GenerativeModel("gemini-2.0-flash") 
 
         # LOCAL EMBEDDING MODEL: Retained only to satisfy model field but not used for comparison
-        self.embedding_model = SentenceTransformer('all-mpnet-base-v2')  
+        #self.embedding_model = SentenceTransformer('all-mpnet-base-v2')  
         
     def get_embedding(self, text):
         """Generates a vector embedding using the local SBERT model (Free)."""
@@ -248,3 +248,4 @@ class ProjectAnalyzer:
 
 # Create a single instance
 analyzer = ProjectAnalyzer()
+

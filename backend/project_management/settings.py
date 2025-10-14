@@ -5,7 +5,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-your-secret-key-here'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['project-management-system-1-2cwr.onrender.com', 'localhost']
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -111,4 +112,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 APPEND_SLASH = False
 #GEMINI_API_KEY = "AIzaSyDwMTZSbaxHDW_HOUbJDLfRWucYjl7fesE"
+
 GEMINI_API_KEY = "AIzaSyCq88KexrXCjaxZqrijIQzLD8k9dpkf-II"

@@ -16,7 +16,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-const API_URL = import.meta.env.VITE_API_URL;
+
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
 
@@ -248,5 +248,6 @@ const Register: React.FC = () => {
 };
 
 export default Register;
+
 
 

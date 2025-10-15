@@ -16,7 +16,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-
+const API_URL = import.meta.env.VITE_API_URL;
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
 
@@ -35,7 +35,7 @@ const Register: React.FC = () => {
     setError("");
 
     try {
-      await axios.post("http://127.0.0.1:8000/auth/users/", {
+      await axios.post("${API_URL}/auth/users/", {
         username,
         email,
         password,
@@ -248,3 +248,4 @@ const Register: React.FC = () => {
 };
 
 export default Register;
+

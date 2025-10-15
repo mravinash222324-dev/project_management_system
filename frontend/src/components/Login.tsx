@@ -36,7 +36,7 @@ const Login: React.FC = () => {
     setIsLoading(true);
     try {
       const tokenResponse = await axios.post(
-        "${API_URL}/auth/jwt/create/",
+        "https://project-management-system-1-2cwr.onrender.com/auth/jwt/create/",
         { username, password }
       );
 
@@ -45,7 +45,7 @@ const Login: React.FC = () => {
       localStorage.setItem("refreshToken", tokenResponse.data.refresh);
 
       const userResponse = await axios.get<UserResponse>(
-        "${API_URL}/auth/users/me/",
+        "https://project-management-system-1-2cwr.onrender.com/auth/users/me/",
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );
 
@@ -257,4 +257,5 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
 

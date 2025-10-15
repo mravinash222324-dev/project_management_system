@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
@@ -35,7 +36,7 @@ const Login: React.FC = () => {
     setIsLoading(true);
     try {
       const tokenResponse = await axios.post(
-        "http://127.0.0.1:8000/auth/jwt/create/",
+        "${API_URL}/auth/jwt/create/",
         { username, password }
       );
 
@@ -44,7 +45,7 @@ const Login: React.FC = () => {
       localStorage.setItem("refreshToken", tokenResponse.data.refresh);
 
       const userResponse = await axios.get<UserResponse>(
-        "http://127.0.0.1:8000/auth/users/me/",
+        "${API_URL}/auth/users/me/",
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );
 
@@ -256,3 +257,4 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+

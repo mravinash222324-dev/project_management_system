@@ -39,3 +39,5 @@ requests-oauthlib==2.0.0
 
 # Optional (light)
 pillow==11.3.0
+numpy
+

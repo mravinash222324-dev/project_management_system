@@ -35,7 +35,7 @@ const Register: React.FC = () => {
     setError("");
 
     try {
-      await axios.post("${API_URL}/auth/users/", {
+      await axios.post("https://project-management-system-1-2cwr.onrender.com/auth/users/", {
         username,
         email,
         password,
@@ -248,4 +248,5 @@ const Register: React.FC = () => {
 };
 
 export default Register;
+
 

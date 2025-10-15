@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from sentence_transformers import SentenceTransformer, util
+#from sentence_transformers import SentenceTransformer, util
 from django.conf import settings
 import whisper
 import re
@@ -248,4 +248,5 @@ class ProjectAnalyzer:
 
 # Create a single instance
 analyzer = ProjectAnalyzer()
+
 

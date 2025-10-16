@@ -40,6 +40,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React's development server
+    "https://project-management-system-git-main-avinashs-projects-df1b1dea.vercel.app?_vercel_share=8RBSOGeZIsl0rki7L2Xb8W9bKSE5AiQc"
 ]
 
 # This is an optional setting to allow credentials (like cookies and headers)
@@ -114,4 +115,5 @@ APPEND_SLASH = False
 #GEMINI_API_KEY = ""
 
 GEMINI_API_KEY = ""
+
 
